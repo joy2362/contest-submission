@@ -25,10 +25,7 @@ class ContestSubmission extends Tool
      */
     public function renderNavigation()
     {
-
-        return view('contest-submission::navigation',[
-            'groups' => "Contest",
-        ]);
+        return view('contest-submission::navigation');
     }
 
 

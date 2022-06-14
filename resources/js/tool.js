@@ -5,5 +5,12 @@ Nova.booting((Vue, router, store) => {
       path: '/contest-submission',
       component: require('./components/Tool'),
     },
+      {
+          name: 'submission',
+          path: '/contest-submission/:id',
+          component: require('./components/submission'),
+      },
   ])
+
+
 })

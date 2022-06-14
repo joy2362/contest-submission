@@ -28,10 +28,7 @@ class ToolServiceProvider extends ServiceProvider
         Nova::serving(function (ServingNova $event) {
 
             Nova::provideToScript([
-                'data' => [
-                    'contest' => Contest::with('submission')->orderByDesc('id')->get(),
-                    'url' => env('APP_URL'),
-                ],
+                'url' => env('APP_URL'),
             ]);
         });
     }

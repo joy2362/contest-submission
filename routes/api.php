@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\ContestSubmission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Joy2362\ContestSubmission\Http\Controllers\SubmissionController;
@@ -17,3 +16,4 @@ use Joy2362\ContestSubmission\Http\Controllers\SubmissionController;
 */
 
 Route::get('/', SubmissionController::class . '@index');
+Route::get('/fetch/submission/{contest}', SubmissionController::class . '@submission');

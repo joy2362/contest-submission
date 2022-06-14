@@ -9,9 +9,18 @@ class SubmissionController extends Controller
 {
     public function index()
     {
-        $contest = Contest::all();
+        $contest = Contest::orderBy('id','DESC')->get();
+
+        return response()->json(
+                 $contest,
+            );
+    }
+
+    public function submission(Contest $contest){
+        $submission = $contest->submission()->get();
         return response()->json([
-                "data" => $contest
-            ]);
+            'submission' => $submission,
+            'contest' => $contest,
+        ]);
     }
 }
